@@ -1,4 +1,4 @@
-function B1Map = compB1_BSS(filepath, output_size)
+function B1Map = compB1map_BSS(filepath, output_size)
 % -------------------------------------------------------------------------
 % compB1BSLesch — B1 Map Reconstruction via Bloch-Siegert Shift Method
 % Author: Valentin Jost (2025)
