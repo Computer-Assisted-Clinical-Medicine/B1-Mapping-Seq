@@ -11,8 +11,7 @@ reconstruction scripts.
 > regularisation parameters (lambda, mu) are provided in `BSS_TGV_vals.mat`
 > exclusively for the block undersampling pattern. The Double Flip Angle
 > implementation supports undersampling pattern flags but has not been
-> validated in the accelerated setting. Use non-block patterns and the DFA
-> acceleration with caution.
+> validated in the accelerated setting.
 
 ---
 
