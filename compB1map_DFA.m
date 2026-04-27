@@ -1,4 +1,4 @@
-function B1map_smoothed = compB1DFAmap(filepath, abs_map)
+function B1map_smoothed = compB1map_DFA(filepath, abs_map)
 % -------------------------------------------------------------------------
 % compB1DFAmap — B1 Map Reconstruction via Double Flip Angle Method
 % Author: Valentin Jost (2025)
