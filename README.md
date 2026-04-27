@@ -12,7 +12,7 @@ reconstruction scripts.
 
 Two complementary B1 mapping methods are implemented:
 
-- **Double Flip Angle (DFA)** — two spoiled GRE acquisitions at flip angles
+- **Double Flip Angle (DFA)** — two acquisitions at flip angles
   α and 2α; B1 efficiency recovered from the signal magnitude ratio
 - **Bloch-Siegert Shift (BSS)** — a 90° excitation followed by an
   off-resonance Fermi pulse at ±Δf; B1 amplitude recovered from the
@@ -63,7 +63,7 @@ B1map = compB1map_DFA('path/to/B1map_DFA', true);    % absolute B1 [T]
 
 **Bloch-Siegert (TGV):**
 ```matlab
-B1Map = compB1map_VSS('path/to/B1map_BS');
+B1Map = compB1map_BSS('path/to/B1map_BS');
 B1Map = compB1map_BSS('path/to/B1map_BS', 64);  % optional: resample to 64³
 ```
 
