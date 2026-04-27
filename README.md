@@ -6,6 +6,14 @@ sodium (²³Na) nuclei, implemented in MATLAB using the
 [Pulseq](https://pulseq.github.io/) framework, together with corresponding
 reconstruction scripts.
 
+> **Disclaimer:** The accelerated acquisition using block undersampling has
+> been tested extensively for the **Bloch-Siegert Shift method only**. TGV
+> regularisation parameters (lambda, mu) are provided in `BSS_TGV_vals.mat`
+> exclusively for the block undersampling pattern. The Double Flip Angle
+> implementation supports undersampling pattern flags but has not been
+> validated in the accelerated setting. Use non-block patterns and the DFA
+> acceleration with caution.
+
 ---
 
 ## Overview
