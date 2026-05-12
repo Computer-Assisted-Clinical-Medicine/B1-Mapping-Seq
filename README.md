@@ -67,13 +67,13 @@ a `.seq` file to the specified path.
 **Double Flip Angle:**
 ```matlab
 B1map = compB1map_DFA('path/to/B1map_DFA', false);   % relative B1
-B1map = compB1map_DFA('path/to/B1map_DFA', true);    % absolute B1 [T]
+B1map = compB1map_DFA('path/to/B1map_DFA', true);    % absolute B1
 ```
 
 **Bloch-Siegert (TGV):**
 ```matlab
 B1Map = compB1map_BSS('path/to/B1map_BS');
-B1Map = compB1map_BSS('path/to/B1map_BS', 64);  % optional: resample to 64³
+B1Map = compB1map_BSS('path/to/B1map_BS', 64);  % optional: resample to 64x64x64
 ```
 
 Both functions read all acquisition parameters directly from the `.seq` file
