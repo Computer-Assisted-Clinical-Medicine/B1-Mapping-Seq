@@ -1,6 +1,6 @@
 function B1Map = compB1map_BSS(filepath, output_size)
 % -------------------------------------------------------------------------
-% compB1BSLesch — B1 Map Reconstruction via Bloch-Siegert Shift Method
+% compB1map_BSS — B1 Map Reconstruction via Bloch-Siegert Shift Method
 % Author: Valentin Jost (2025)
 %
 % Reconstructs a 3D relative B1 efficiency map from two 
@@ -194,7 +194,7 @@ end
 % Normalise to the nominal B1 amplitude to obtain relative B1 efficiency.
 
 B1plus    = BlochSiegReco(tgv_opt);
-B1nominal = (pi/2) / (gamma_rad * 500e-6);   % Nominal B1 for a 90° block pulse of 500 µs [T]
+B1nominal = (pi/2) / (gamma_rad * 500e-6);   % Nominal B1 for a 90° block pulse of 500 µs [T] TODO: general pulse length via definitions
 B1Map     = B1plus ./ B1nominal;              % Relative B1 efficiency [a.u.]
 
 %% Display Three Orthogonal Central Slices
