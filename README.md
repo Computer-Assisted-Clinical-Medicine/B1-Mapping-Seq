@@ -1,6 +1,6 @@
 # B1-Mapping-Seq — Sodium B1 Mapping (Pulseq)
 
-This repository is part of an abstract submitted to ISMRM 2026 (#01991). It provides
+This repository is part of an abstract submitted to ISMRM 2026 (#01991, 469-05-012). It provides
 open-source implementations of two 3D Cartesian B1 mapping approaches for
 sodium (²³Na) nuclei, implemented in MATLAB using the
 [Pulseq](https://pulseq.github.io/) framework, together with corresponding
