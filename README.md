@@ -1,6 +1,6 @@
 # B1-Mapping-Seq — Sodium B1 Mapping (Pulseq)
 
-This repository is part of an abstract submitted to ISMRM 2026. It provides
+This repository is part of an abstract submitted to ISMRM 2026 (#01991). It provides
 open-source implementations of two 3D Cartesian B1 mapping approaches for
 sodium (²³Na) nuclei, implemented in MATLAB using the
 [Pulseq](https://pulseq.github.io/) framework, together with corresponding
@@ -13,6 +13,8 @@ reconstruction scripts.
 > implementation supports undersampling pattern flags but has not been
 > validated in the accelerated setting.
 
+> **ToDo:** Adding a multi coil option. Its still in open discussion at which point  
+> to combine different channels and how to combine phase images appropiatly.
 ---
 
 ## Overview
@@ -98,7 +100,7 @@ and display three orthogonal central slices of the reconstructed B1 map.
 | `alpha` | Excitation flip angle [degrees] | `90°` |
 | `fov` | Field of view [m] | `[240e-3, 240e-3, 240e-3]` |
 | `Nx / Ny / Nz` | Matrix size | `40 × 40 × 40` |
-| `TR` | Repetition time | `250 ms` |
+| `TR` | Repetition time | `150 ms` |
 | `T` | Fermi pulse duration [s] | `2 ms` |
 | `bs_offset` | Off-resonance frequency [Hz] | `1000 Hz` |
 | `pattern` | Undersampling pattern | `'block'` |
