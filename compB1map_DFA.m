@@ -3,14 +3,12 @@ function B1map_smoothed = compB1map_DFA(filepath, abs_map)
 % compB1DFAmap — B1 Map Reconstruction via Double Flip Angle Method
 % Author: Valentin Jost (2025)
 %
-% Reconstructs a 3D B1 efficiency map from two spoiled GRE acquisitions
+% Reconstructs a 3D B1 efficiency map from two acquisitions
 % at different flip angles (alpha1, alpha2 = 2*alpha1). The local flip
 % angle is estimated from the signal ratio using:
 %
 %   r = acos( S(2*alpha) / (2 * S(alpha)) )
 %   B1_rel = r / alpha_nominal
-%
-% Optionally returns an absolute B1 map in Tesla.
 %
 % Inputs:
 %   filepath  : Path to the .seq/.dat files (with or without extension)
@@ -123,9 +121,9 @@ r      = acos(S2 ./ (2 * S1 + eps));
 B1_rel = r ./ alpha;   % Relative B1 efficiency [a.u.]; 1.0 = nominal flip angle
 
 if abs_map
-    % Convert relative B1 to absolute B1 amplitude in Tesla:
+    % Convert relative B1 to absolute B1 amplitude:
     % B1_nominal = alpha / (gamma * tau), where tau is the pulse duration
-    tau        = 0.5e-3;        % Block pulse duration [s]
+    tau        = 0.5e-3;        % Block pulse duration [s] ToDo: generalize pulse length and incorporate in definitions
     gamma_na   = 11.262e6;      % Gyromagnetic ratio for 23Na [Hz/T]
     B1_nominal = alpha / (gamma_na * tau);
     B1_abs     = B1_rel .* B1_nominal;
